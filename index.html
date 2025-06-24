@@ -6,7 +6,11 @@
   <title>株式会社北村建設興業</title>
   <!-- link -->
    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
    <link rel="stylesheet" href="css/style.css">
+   <!--js-->
+   
 </head>
 <body>
   
@@ -50,23 +54,40 @@
   <main>
   <!--FIRST-VIEW-->
     <section id="first_view">
-      <p>
-        永遠も。<br class="pc_none">瞬間も。<br>あなたと共に。
+      <div class="fv_title">
+      <p class="top_title">
+        永遠も。<br class="pc_none">瞬間も。
       </p>
+      <p class="bottom_title">
+        あなたと共に。
+      </p>
+      </div>
       <div class="fv_slider">
         <div class="fv_slider_track">
+         <ul class="fv_slider_items">
+
+          <li>
           <picture>
             <source srcset="images/FirstView_01_sp" type="image" media="(max-width: 768px)">
             <img src="images/FirstView_01.jpg" alt="FV新築住宅写真">
           </picture>
+          </li>
+
+          <li>
           <picture>
             <source srcset="images/FirstView_02_sp" type="image" media="(max-width: 768px)">
             <img src="images/FirstView_02.jpg" alt="FV都市計画〜開発写真">
           </picture>
+          </li>
+
+          <li>
           <picture>
             <source srcset="images/FirstView_03_sp" type="image" media="(max-width: 768px)">
             <img src="images/FirstView_03.jpg" alt="FVリフォーム写真">
           </picture>
+          </li>
+
+          </ul>
         </div>
       </div>
     </section>
@@ -81,8 +102,8 @@
 
   </footer>
   <!-- jQueryの読み込み（CDN） -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- JavaScriptファイルの読み込み -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

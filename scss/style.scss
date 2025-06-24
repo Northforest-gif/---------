@@ -25,13 +25,13 @@ img {
   height: auto;
   display: block;
 }
-.pc-none {
+.pc_none {
   display: none;
   @media (max-width:768px) {
     display: block;
   }
 }
-.sp-none {
+.sp_none {
   display: block;
   @media (max-width:768px) {
     display: none;
@@ -126,13 +126,23 @@ img {
   width: 100%;
   height: 100%;
   position: relative;
+}
 
-  p {
-    position: absolute;
-     top: 33.9rem;
+.fv_title {
+   position: absolute;
+     top: 51.5%;
+     left: 50.6%;
+     transform: translate(-50%, -50%);
+     font-size: 4rem;
+     font-weight: 600;
+     text-align: center;
+     letter-spacing: 0.3em;
      z-index: 500;
      color: white;
-  }
+}
+
+.bottom_title {
+  padding-top: 1rem;
 }
 
 .fv_slider {
@@ -141,3 +151,12 @@ img {
   position: relative;
 }
 
+.fv_slider_items {
+  width: 100%;
+  height: 100%;
+
+  picture {
+    width: 100%;
+    object-fit: cover;
+  }
+}

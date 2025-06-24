@@ -1,0 +1,1 @@
+ $(".fv_slider_items").slick();
