@@ -27,6 +27,12 @@ img {
   display: block;
 }
 
+.wrapper_inner {
+  max-width: 940px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
 .pc_none {
   display: none;
 }
@@ -167,4 +173,6 @@ img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*ABOUT*//*# sourceMappingURL=style.css.map */
