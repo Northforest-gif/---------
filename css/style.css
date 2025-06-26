@@ -33,6 +33,10 @@ img {
   padding-inline: 1rem;
 }
 
+.green_bg {
+  background-color: rgba(77, 150, 0, 0.1019607843);
+}
+
 .section_title {
   color: #4D9600;
   text-align: center;
@@ -243,10 +247,6 @@ img {
   padding-block: 8rem;
 }
 
-.green_bg {
-  background-color: rgba(77, 150, 0, 0.1019607843);
-}
-
 .service_contents {
   padding-top: 6.8rem;
 }
@@ -323,4 +323,23 @@ img {
 .reverse_service_contents_textarea p {
   font-weight: 600;
   padding-top: 1.7rem;
+}
+
+/*WORKS*/
+.works {
+  width: 100%;
+  height: auto;
+  padding-block: 8rem;
+}
+
+.works_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+  margin-top: 6.8rem;
+}
+
+.works_contents_text {
+  padding-top: 1.9rem;
 }/*# sourceMappingURL=style.css.map */

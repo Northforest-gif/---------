@@ -35,6 +35,10 @@ img {
   padding-inline: 1rem;
 }
 
+.green_bg {
+  background-color: $light-green;
+}
+
 .section_title {
   color: $green;
   text-align: center;
@@ -237,10 +241,6 @@ img {
   padding-block: 8rem;
 }
 
-.green_bg {
-  background-color: $light-green;
-}
-
 .service_contents {
   padding-top: 6.8rem;
 }
@@ -313,4 +313,21 @@ img {
 .reverse_service_contents_textarea p {
   font-weight: 600;
   padding-top: 1.7rem;
+}
+
+/*WORKS*/
+.works {
+   width: 100%;
+  height: auto;
+  padding-block: 8rem;
+}
+
+.works_contents {
+  display: flex;
+  gap: 4rem;
+  margin-top: 6.8rem;
+}
+
+.works_contents_text {
+  padding-top: 1.9rem;
 }
