@@ -31,6 +31,11 @@ ul {
   list-style: none;
 }
 
+address {
+  font-style: normal;
+  font-family: inherit;
+}
+
 .wrapper_inner {
   max-width: 940px;
   margin: 0 auto;
@@ -429,4 +434,67 @@ ul {
       -ms-flex-pack: right;
           justify-content: right;
   background-color: white;
+}
+
+/*COMPANY*/
+.company {
+  width: 100%;
+  height: auto;
+  padding-block: 8rem;
+}
+
+.company_content {
+  width: 100%;
+  margin-top: 6.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.company_access {
+  position: absolute;
+  width: 50rem;
+  height: 26.2rem;
+  background-color: #4D9600;
+  top: 20rem;
+  right: 0;
+  z-index: -1;
+  padding-top: 4.9rem;
+  padding-left: 22rem;
+  color: white;
+}
+
+.company_access h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.company_access p {
+  font-weight: 600;
+}
+
+.access_location {
+  padding-top: 0.73rem;
+}
+
+.tel_number {
+  padding-top: 1rem;
+}
+
+.number a {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  color: white;
+  text-decoration: none !important;
+}
+
+.mail_address {
+  padding-top: 1.6rem;
+}
+
+.mail_address a {
+  text-decoration: none !important;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
