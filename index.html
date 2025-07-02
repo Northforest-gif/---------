@@ -9,10 +9,14 @@
   <!-- link -->
    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
    <link rel="stylesheet" href="css/style.css">
    <!--js-->
-   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 </head>
 <body>
   
@@ -74,7 +78,7 @@
             <img src="images/FirstView_01.jpg" alt="FV新築住宅写真">
           </picture>
           </li>
-
+<!--
           <li>
           <picture>
             <source srcset="images/FirstView_02_sp" type="image" media="(max-width: 768px)">
@@ -88,7 +92,7 @@
             <img src="images/FirstView_03.jpg" alt="FVリフォーム写真">
           </picture>
           </li>
-
+-->
           </ul>
         </div>
       </div>
@@ -363,14 +367,259 @@
     </div>
   </section>
   <!--COMPANY-->
+  <!--CONTACT-->
+  <section id="contact" class="contact">
+    <div class="wrapper_inner">
+
+      <h1 class="section_title">CONTACT</h1>
+      <p class="section_sub_title">お問い合わせ</p>
+
+      <div class="contact_content">
+        <p>
+          ３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。
+        </p>
+        <form action="">
+          <div class="contact_form">
+
+            <div class="contact_form_name">
+              <label for="name">お名前 *</label>
+              <input type="text" id="name" name="name" placeholder="例：北村太郎" required>
+            </div>
+
+            <div class="contact_form_gender">
+              <p>性別</p>
+              <label class="gender_type" for="gender_male">
+              <input type="radio" id="gender_male" name="gender" value="male" required>
+              男性</label>
+
+              <label class="gender_type" for="gender_female">
+              <input type="radio" id="gender_female" name="gender" value="female" required>
+              女性</label>
+            </div>
+
+            <div class="contact_form_email">
+              <label for="email">メールアドレス *</label>
+              <input type="email" id="email" name="email" placeholder="例：aaaaaaaa@gmail.com" required>
+            </div>
+
+            <div class="contact_form_inquiry-type">
+              <label for="category">問い合わせ種別</label>
+              <select name="category" id="category" class="category">
+                 <option value="家づくりについて">家づくりについて</option>
+                 <option value="リフォームについて">リフォームについて</option>
+                 <option value="リノベーションについて">リノベーションについて</option>
+                 <option value="公共施設について">公共施設について</option>
+                 <option value="その他">その他</option>
+              </select>
+            </div>
+
+            <div class="contact_form_message">
+              <label for="message">内容 *</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="contact_form_questionnaire">
+              <p>何を見て当社HPを知りましたか？ (複数回答可)　*</p>
+              <div class="contact_form-checkbox">
+                <label><input type="checkbox" name="source[]" value="インターネット"> インターネット</label>
+                <label><input type="checkbox" name="source[]" value="チラシ"> チラシ</label>
+                <label><input type="checkbox" name="source[]" value="住宅展示場"> 住宅展示場</label>
+                <label><input type="checkbox" name="source[]" value="看板"> 看板</label>
+                <label><input type="checkbox" name="source[]" value="各種SNS"> 各種SNS</label>
+                <label><input type="checkbox" name="source[]" value="紹介"> 紹介</label>
+                <label><input type="checkbox" name="source[]" value="通りがかり"> 通りがかり</label>
+                <label><input type="checkbox" name="source[]" value="その他"> その他</label>
+              </div>
+            </div>
+
+            <div class="contact_form_privacy">
+              <p>個人情報保護方針</p>
+               <div class="contact_form_privacy_container" data-simplebar>
+    
+                <h2>個人情報取扱事業者の氏名又は名称(法24条1項1号)</h2>
+                <p>株式会社 北村建設興業</p>
+
+                <div class="privacy_container_01">
+                <h2>個人情報の取り扱い</h2>
+                <p>
+                  弊社は、個人情報保護に関連する法令を遵守し、お客様からご提供いただく個人情報を、細心の注意を払って取り扱っております。このプライバシーポリシーでは、当社におけるお客様の個人情報の取扱いについてご説明しております。
+                </p>
+                </div>
+
+                <div class="privacy_container_02">
+                <h2>個人情報の利用目的（法18条、15条）</h2>
+                <ul>
+                  <li>
+                    ・お客様からご注文頂いた工事を適切に完成させるため及び物品の納品をさせて頂くため、お客様へ弊社が取扱う商品を積極的に提案する営業活動のため、商品及びサービスの提供に関する手続（融資・申請・保証・保険・登記など）の支援、取次ぎのため
+                  </li>
+                  <li>
+                    ・お客様に弊社が取扱う商品、企業活動、イベント等に関するお知らせをお届けするため（カタログ、ご提案資料、展示のご案内、各種刊行物など）
+                  </li>
+                  <li>
+                  ・見学会等へご来場のお客様へのご商談、ご来場日時の確認のため
+                  </li>
+                  <li>
+                    ・商品やサービスについてお客さまからいただいたご意見を活用するため
+                  </li>
+                  <li>
+                    ・商品のアフターサービス、メンテナンス等のためにお客さまと接触するため
+                  </li>
+                  <li>
+                    ・その他お客さまから寄せられたご意見、ご要望にお応えするため、及び弊社が取扱う商品、サービス等の向上を図るため
+                  </li>
+                </ul>
+                </div>
+
+                <div class="privacy_container_03">
+                <h2>保有個人データ利用目的（法24条1項2号）</h2>
+                <ul>
+                  <li>
+                    ・当社が建築したお客様宅のアフターメンテナンスを行うため
+                  </li>
+                  <li>
+                    ・当社がお客様に提供するサービスにおいて利用するため
+                  </li>
+                  <li>
+                    ・お客様に特別なサービスや新しい商品などの情報を的確にお知らせするため
+                  </li>
+                  <li>
+                    ・お客様に合ったサービスを提供するため
+                  </li>
+                  <li>
+                    ・当社の建築した住宅の利用状況や利用環境などに関する調査を実施して客観的にお客様の満足度を把握するため
+                  </li>
+                  <li>
+                    ・必要に応じてお客様に連絡を行うため
+                  </li>
+                  <li>
+                    ・会計監査上の確認作業を行うため
+                  </li>
+                </ul>
+                </div>
+
+                <div class="privacy_container_04">
+                <h2>個人情報の安全対策（法20条）</h2>
+                <p>
+                  お客様の個人情報を安全に管理・運営するよう鋭意努力しており、個人情報への外部からの不正なアクセス、個人情報の紛失・毀損・破壊・改ざん・漏えい、社外への不正な流出などへの危険防止に対する合理的かつ適切な安全対策を行っています。また個人情報を取り扱う部門ごとに情報管理責任者を置き、個人情報の適切な管理に努めるとともに、情報セキュリティに関する規程を設けて社員への周知徹底を実施しています。
+                </p>
+                </div>
+
+                <div class="privacy_container_05">
+                <h2>第三者への提供（法23条）</h2>
+                <p>
+                  個人情報は、以下のいずれかに該当する場合を除いて、いかなる第三者にも開示・提供いたしません。
+                </p>
+                <ul>
+                  <li>
+                    ・お客さまの同意がある場合。
+                  </li>
+                  <li>
+                    ・お客様個人を識別することができない状態で開示する場合。
+                  </li>
+                  <li>
+                    ・業務を円滑に進める等の理由で外部事業者に取扱いを委託する場合。（この場合には、十分な保護水準を備えている委託先を選定し、漏えいや再提供を防止するために契約により義務づける等の方法によって、適切な管理を実施します）
+                  </li>
+                  <li>
+                    ・法令等により開示を要求された場合
+                  </li>
+                  <li>
+                    ・人の生命、身体又は財産の保護のために必要であって、お客様の同意を得ることが困難である場合
+                  </li>
+                  <li>
+                    ・国の機関や地方公共団体又はその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、お客様の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがある場合
+                  </li>
+                </ul>
+                </div>
+
+                <div class="privacy_container_06">
+                <h2>個人情報の開示手続（法25条）</h2>
+                <p>
+                  お客様本人の個人情報に関する保有データの開示請求があった場合には、ご本人であることを運転免許証・パスポート等の身分証明書で確認させていただいた上、本人確認が終了後、速やかに開示させていただきます。
+                </p>
+
+                <div></div>
+                <h2>個人情報の訂正等（法26条）</h2>
+                <p>
+                  前項の開示手続きにより、弊社が保有する保有個人データ内容に事実と異なる記載がある場合には、訂正、変更又は削除の手続きを取らせて頂きます。
+                </p>
+                </div>
+
+                <div class="privacy_container_07">
+                <h2>プライバシーポリシーに関するお問合せ先</h2>
+                <p>
+                  弊社の個人情報の取扱いに関するお問合せは、下記までお問い合せください。
+                </p>
+                <ul>
+                  <li>社名：株式会社北村建設興業</li>
+                  <li>住所：長崎県長崎市横尾○丁目○-○</li>
+                  <li>電話：000-000-0000</li>
+                  <li>FAX：000-000-0000</li>
+                  <li>メールアドレス：info@example.com</li>
+                </ul>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="contact_form_button">
+              <button type="submit" class="button">内容に同意して送信</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!--CONTACT-->
   </main>
 
-  <footer>
+  <footer id="footer" class="footer">
+    <div class="footer_content">
+      <div class="footer_main wrapper_inner">
+        <div class="footer_logo">
+         <a href="#">
+           <p>株式会社 北村建設興業</p>
+         </a>
+        </div>
 
+        <nav class="footer_nav">
+          <ul class="footer_nav_list">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#company">COMPANY</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      
+        <ul class="footer_sns">
+          <li>
+            <a href="#footer" target="_blank" rel="noopener noreferrer">
+            <img src="images/icon-twitter.svg" alt="twitter"></a>
+          </li>
+          <li>
+            <a href="#footer" target="_blank" rel="noopener noreferrer">
+            <img src="images/icon-facebook.svg" alt="facebook"></a>
+          </li>
+          <li>
+            <a href="#footer" target="_blank" rel="noopener noreferrer">
+            <img src="images/icon-youtube.svg" alt="youtube"></a>
+          </li>
+          <li>
+            <a href="#footer" target="_blank" rel="noopener noreferrer">
+            <img src="./images/icon-inst.svg" alt="instagram"></a>
+          </li>
+        </ul>
+      </div>
+
+        <div class="footer_copyright">
+          <p>©︎Copyright0000<span sp_none>　</span><br class="pc_none">kitamurakensetukogyo</p>
+        </div>
+      
+    </div>
   </footer>
   <!-- jQueryの読み込み（CDN） -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

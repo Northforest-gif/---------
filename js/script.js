@@ -1,5 +1,6 @@
  $(".fv_slider_items").slick();
 
+//COMPANYのaccess
  document.addEventListener('DOMContentLoaded', () => {
   const TEL_NUMBER = '00000000000';
   const telLink = document.querySelector('.tel-link');
@@ -25,3 +26,14 @@
     }, 200);
   });
 });
+
+//CONTACTのform
+function validateCheckbox() {
+  const checkboxes = document.querySelectorAll('input[name="source[]"]');
+  const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+  if (!isChecked) {
+    alert('少なくとも1つはチェックしてください。');
+    return false;
+  }
+  return true;
+};
