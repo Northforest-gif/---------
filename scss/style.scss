@@ -5,6 +5,11 @@ $light-green: #4D96001A;
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+  overflow-x: hidden;
+  @media (max-width:768px) {
+    scroll-padding-top: 5rem;
+  }
 }
 
 body {
@@ -14,6 +19,7 @@ body {
   font-family: "YuMincho", "游明朝", "Hiragino Mincho Pro", serif;
   background: #fff;
   line-height: calc(25/16);
+  overflow-x: hidden;
 }
 
 a {
@@ -42,7 +48,7 @@ address {
   max-width: 940px;
   margin: 0 auto;
   padding-inline: 1rem;
-}
+  }
 
 .green_bg {
   background-color: $light-green;
@@ -84,11 +90,16 @@ address {
 /* HEADER */
 .header {
   background-color: transparent;
-  width: 100%;
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
   z-index: 1000;
   height: 8rem;
+  @media (max-width:768px) {
+      height: 5rem;
+      }
 
   &_inner {
     display: flex;
@@ -98,6 +109,10 @@ address {
     height: 100%;
     margin: 0 auto;
     padding-inline: 1rem;
+   box-sizing: border-box;
+   @media (max-width:768px) {
+      padding-inline: 0;
+      }
   }
 
   &_logo {
@@ -105,15 +120,28 @@ address {
     color: white;
     height: 100%;
     padding-top: 2.9rem;
+    @media (max-width:768px) {
+      padding-left: 2rem;
+      padding-top: 0.9rem;
+      }
   }
 
   &_nav {
     height: 100%;
+    @media (max-width:768px) {
+      display: none;
+      }
 
     ul {
       display: flex;
       gap: 3.11rem;
       height: 100%;
+      @media (max-width:910px) {
+       gap: 2.5rem;
+      }
+      @media (max-width:830px) {
+       gap: 1.5rem;
+      }
     }
 
    a {
@@ -172,6 +200,7 @@ address {
 
 .fv_title {
    position: absolute;
+    width: 100%;
      top: 51.3%;
      left: 50.6%;
      transform: translate(-50%, -50%);
@@ -223,24 +252,33 @@ address {
 }
 
 .about_textarea {
+  width: auto;
+  height: 28rem;
   writing-mode: vertical-rl;
   position: absolute;
-  top: 22.6%;
-  left: 12.5%;
-
+  top: 50%;
+  right: 39.8%;
+  transform: translateY(-50%);
 }
 
 .about_title {
   font-size: 3rem;
   letter-spacing: 0.5rem;
   padding-left: 3.75rem;
+  @media (max-width:830px) {
+       padding-left: 2.5rem;
+      }
 }
 
 .about_text {
   font-size: 1.8rem;
   letter-spacing: 0.7rem;
   line-height: 2.66;
+  @media (max-width:910px) {
+       line-height: 2.3;
+      }
 }
+
 
 /*SERVICE*/
 .service {
@@ -273,6 +311,7 @@ address {
   height: auto;
   z-index: 2;
   position: relative;
+ 
 }
 
 .service_contents_img p {
@@ -295,6 +334,7 @@ address {
   color: white;
   padding-top: 5rem;
   padding-left: 22rem;
+  
 }
 
 .reverse_service_contents_textarea {
@@ -308,6 +348,15 @@ address {
   color: white;
   padding-top: 5rem;
   padding-left: 4rem;
+   @media (max-width:855px) {
+      width: 45rem;
+      height: 20rem;
+       padding-top: 3rem;
+      }
+  @media (max-width:805px) {
+      width: 40rem;
+
+      }
 }
 
 .service_contents_textarea h2,
@@ -334,10 +383,16 @@ address {
   display: flex;
   gap: 4rem;
   margin-top: 6.8rem;
+  @media (max-width:910px) {
+     gap: 2rem;
+      }
 }
 
 .works_contents_text {
   padding-top: 1.9rem;
+  @media (max-width:910px) {
+      font-size: 1.4rem;
+      }
 }
 
 /*NEWS*/

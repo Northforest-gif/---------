@@ -3,6 +3,13 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
 }
 
 body {
@@ -12,6 +19,7 @@ body {
   font-family: "YuMincho", "游明朝", "Hiragino Mincho Pro", serif;
   background: #fff;
   line-height: 1.5625;
+  overflow-x: hidden;
 }
 
 a {
@@ -88,11 +96,19 @@ address {
 /* HEADER */
 .header {
   background-color: transparent;
-  width: 100%;
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   z-index: 1000;
   height: 8rem;
+}
+@media (max-width: 768px) {
+  .header {
+    height: 5rem;
+  }
 }
 .header_inner {
   display: -webkit-box;
@@ -106,6 +122,13 @@ address {
   height: 100%;
   margin: 0 auto;
   padding-inline: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .header_inner {
+    padding-inline: 0;
+  }
 }
 .header_logo {
   font-size: 2rem;
@@ -113,8 +136,19 @@ address {
   height: 100%;
   padding-top: 2.9rem;
 }
+@media (max-width: 768px) {
+  .header_logo {
+    padding-left: 2rem;
+    padding-top: 0.9rem;
+  }
+}
 .header_nav {
   height: 100%;
+}
+@media (max-width: 768px) {
+  .header_nav {
+    display: none;
+  }
 }
 .header_nav ul {
   display: -webkit-box;
@@ -122,6 +156,16 @@ address {
   display: flex;
   gap: 3.11rem;
   height: 100%;
+}
+@media (max-width: 910px) {
+  .header_nav ul {
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 830px) {
+  .header_nav ul {
+    gap: 1.5rem;
+  }
 }
 .header_nav a {
   font-size: 1.8rem;
@@ -176,6 +220,7 @@ address {
 
 .fv_title {
   position: absolute;
+  width: 100%;
   top: 51.3%;
   left: 50.6%;
   -webkit-transform: translate(-50%, -50%);
@@ -228,12 +273,16 @@ address {
 }
 
 .about_textarea {
+  width: auto;
+  height: 28rem;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   position: absolute;
-  top: 22.6%;
-  left: 12.5%;
+  top: 50%;
+  right: 39.8%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .about_title {
@@ -241,11 +290,21 @@ address {
   letter-spacing: 0.5rem;
   padding-left: 3.75rem;
 }
+@media (max-width: 830px) {
+  .about_title {
+    padding-left: 2.5rem;
+  }
+}
 
 .about_text {
   font-size: 1.8rem;
   letter-spacing: 0.7rem;
   line-height: 2.66;
+}
+@media (max-width: 910px) {
+  .about_text {
+    line-height: 2.3;
+  }
 }
 
 /*SERVICE*/
@@ -319,6 +378,18 @@ address {
   padding-top: 5rem;
   padding-left: 4rem;
 }
+@media (max-width: 855px) {
+  .reverse_service_contents_textarea {
+    width: 45rem;
+    height: 20rem;
+    padding-top: 3rem;
+  }
+}
+@media (max-width: 805px) {
+  .reverse_service_contents_textarea {
+    width: 40rem;
+  }
+}
 
 .service_contents_textarea h2,
 .reverse_service_contents_textarea h2 {
@@ -347,9 +418,19 @@ address {
   gap: 4rem;
   margin-top: 6.8rem;
 }
+@media (max-width: 910px) {
+  .works_contents {
+    gap: 2rem;
+  }
+}
 
 .works_contents_text {
   padding-top: 1.9rem;
+}
+@media (max-width: 910px) {
+  .works_contents_text {
+    font-size: 1.4rem;
+  }
 }
 
 /*NEWS*/
