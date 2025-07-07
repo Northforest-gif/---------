@@ -233,9 +233,22 @@ address {
   color: white;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 768px) {
+  .fv_title {
+    font-size: 3rem;
+    line-height: 2;
+    top: 51.4%;
+    left: 51.3%;
+  }
+}
 
 .bottom_title {
   padding-top: 0.9rem;
+}
+@media (max-width: 768px) {
+  .bottom_title {
+    padding-top: 0rem;
+  }
 }
 
 .fv_slider {
@@ -283,6 +296,13 @@ address {
   right: 39.8%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .about_textarea {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .about_title {
