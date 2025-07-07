@@ -537,6 +537,11 @@ address {
   height: auto;
   padding-block: 8rem 9.7rem;
 }
+@media (max-width: 768px) {
+  .works {
+    padding-block: 5rem 2.05rem;
+  }
+}
 
 .works_contents {
   display: -webkit-box;
@@ -550,6 +555,12 @@ address {
     gap: 2rem;
   }
 }
+@media (max-width: 768px) {
+  .works_contents {
+    display: block;
+    margin-top: 3.8rem;
+  }
+}
 
 .works_contents_text {
   padding-top: 1.9rem;
@@ -557,6 +568,14 @@ address {
 @media (max-width: 910px) {
   .works_contents_text {
     font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .works_contents_text {
+    padding-top: 0.95rem;
+    margin-bottom: 2.15rem;
+    font-size: 1.6rem;
+    line-height: 1.5625;
   }
 }
 

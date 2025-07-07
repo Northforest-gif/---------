@@ -461,6 +461,9 @@ address {
    width: 100%;
   height: auto;
   padding-block: 8rem 9.7rem;
+   @media (max-width:768px) {
+      padding-block: 5rem 2.05rem;
+      }
 }
 
 .works_contents {
@@ -470,12 +473,22 @@ address {
   @media (max-width:910px) {
      gap: 2rem;
       }
+   @media (max-width:768px) {
+     display: block;
+     margin-top: 3.8rem;
+      }
 }
 
 .works_contents_text {
   padding-top: 1.9rem;
   @media (max-width:910px) {
       font-size: 1.4rem;
+      }
+   @media (max-width:768px) {
+      padding-top: 0.95rem;
+      margin-bottom: 2.15rem;
+      font-size: 1.6rem;
+      line-height: calc(25 / 16);
       }
 }
 
