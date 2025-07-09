@@ -1035,10 +1035,16 @@ input[type="checkbox"]:checked:before {
 .footer_main {
   padding-block: 8rem;
   text-align: center;
+  @media (max-width:768px) {
+      padding-block: 5rem;
+      }
 }
 
 .footer_logo {
   padding-bottom: 2.7rem;
+  @media (max-width:768px) {
+      padding-bottom: 1.9rem;
+      }
 }
 
 .footer_logo a {
@@ -1053,12 +1059,21 @@ input[type="checkbox"]:checked:before {
   padding-top: 2.8rem;
   margin: 0 auto;
   border-top: 1px solid black;
+  @media (max-width:768px) {
+      width: 100%;
+      padding-top: 2rem;
+      }
 }
 
 .footer_nav_list {
   display: flex;
   justify-content: center;
   gap: 5.1rem;
+  @media (max-width:768px) {
+      flex-wrap: wrap;
+      column-gap: 3rem;
+      row-gap: 0.5rem;
+      }
 }
 
 .footer_nav_list a {
@@ -1083,10 +1098,16 @@ input[type="checkbox"]:checked:before {
   text-align: center;
   padding-block: 3rem 2.9rem;
   background-color: $green;
+   @media (max-width:768px) {
+      padding-block: 2.1rem;
+      }
 }
 
 .footer_copyright p {
   font-size: 2rem;
   line-height: calc(33 / 20);
   color: white;
+   @media (max-width:768px) {
+      line-height: calc(25 / 20);
+      }
 }
