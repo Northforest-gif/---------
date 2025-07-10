@@ -1,4 +1,34 @@
- $(".fv_slider_items").slick();
+ //js-header
+ // スクロールするとロゴの色変更
+  $(function () {
+    const targetOffset = $(".about").offset().top - 80;
+
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() >= targetOffset) {
+        $(".js-header").addClass("scrolled");
+      } else {
+        $(".js-header").removeClass("scrolled");
+      }
+    });
+  });
+
+  //js-hamburger
+  const ham = $('.js-hamburger'); //js-hamburgerの要素を取得し、変数hamに格納
+const nav = $('.js-nav'); //js-navの要素を取得し、変数navに格納
+ham.on('click', function () { //ハンバーガーメニューをクリックしたら
+    ham.toggleClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
+    nav.toggleClass('active');
+ 
+});
+ 
+ //FV slick
+ $(".fv_slider_items").slick({
+  autoplay: true,
+  autoplaySpeed: 3000,
+  infinite: true,
+  cssEase: 'linear',
+  speed: 1500,
+ });
 
 //COMPANYのaccess
  document.addEventListener('DOMContentLoaded', () => {
