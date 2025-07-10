@@ -722,6 +722,18 @@ address {
   background-color: white;
 }
 
+.more_icon a:hover img {
+  animation: shake-right 0.4s ease-in-out;
+}
+
+@keyframes shake-right {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(4px); }
+  50% { transform: translateX(-3px); }
+  75% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
 /*COMPANY*/
 .company {
   width: 100%;
