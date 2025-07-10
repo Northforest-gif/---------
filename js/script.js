@@ -30,6 +30,34 @@ ham.on('click', function () { //ハンバーガーメニューをクリックし
   speed: 1500,
  });
 
+ // WORKS モーダルウィンドウ
+$(function () {
+  const modal = $("#js-modal");
+  const overlay = $("#js-overlay");
+  const close = $("#js-close");
+
+  $('.modal-trigger').on('click', function () {
+    const imgSrc = $(this).data('img');
+    const text = $(this).data('text');
+
+    $('#modal-img').attr('src', imgSrc);
+    $('#modal-text').text(text);
+
+    modal.addClass("open");
+    overlay.addClass("open");
+  });
+
+  close.on('click', function () {
+    modal.removeClass("open");
+    overlay.removeClass("open");
+  });
+
+  overlay.on('click', function () {
+    modal.removeClass("open");
+    overlay.removeClass("open");
+  });
+});
+
 //COMPANYのaccess
  document.addEventListener('DOMContentLoaded', () => {
   const TEL_NUMBER = '00000000000';
