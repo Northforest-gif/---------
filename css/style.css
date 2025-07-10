@@ -666,6 +666,12 @@ address {
   cursor: pointer;
 }
 
+.works_contents_item:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.4 ease;
+  transition: all 0.4 ease;
+}
+
 .overlay {
   position: fixed;
   width: 100%;
