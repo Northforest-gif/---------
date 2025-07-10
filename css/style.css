@@ -1554,4 +1554,74 @@ input[type=checkbox]:checked:before {
   .footer_copyright p {
     line-height: 1.25;
   }
+}
+
+/*top_icon*/
+.top_icon {
+  position: fixed;
+  bottom: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.top_icon.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.top_icon:hover {
+  -webkit-animation: shake-top 0.4s ease-in-out;
+          animation: shake-top 0.4s ease-in-out;
+}
+
+@-webkit-keyframes shake-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  75% {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes shake-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  75% {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */

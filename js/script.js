@@ -58,6 +58,25 @@ $(function () {
   });
 });
 
+//top_icon
+$(function () {
+  const $topIcon = $('#top_icon');
+  const fvHeight = $('.first_view').outerHeight(); // .fvがファーストビュー要素
+
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop() > 100) {
+      $topIcon.addClass('show');
+    } else {
+      $topIcon.removeClass('show');
+    }
+  });
+
+  // スクロールでトップに戻る
+  $topIcon.on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 200);
+  });
+});
+
 //COMPANYのaccess
  document.addEventListener('DOMContentLoaded', () => {
   const TEL_NUMBER = '00000000000';

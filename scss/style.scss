@@ -1267,3 +1267,33 @@ input[type="checkbox"]:checked:before {
       line-height: calc(25 / 20);
       }
 }
+
+/*top_icon*/
+.top_icon {
+  position: fixed;
+  bottom: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.top_icon.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.top_icon:hover {
+  animation: shake-top 0.4s ease-in-out;
+}
+
+@keyframes shake-top {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(7px); }
+  50% { transform: translateY(-4px); }
+  75% { transform: translateY(7px); }
+  100% { transform: translateY(0); }
+}
