@@ -17,7 +17,7 @@ body {
   font-weight: 500;
   color: #000000;
   font-family: "YuMincho", "游明朝", "Hiragino Mincho Pro", serif;
-  background: #fff;
+  background: $light-green;
   line-height: calc(25/16);
   overflow-x: hidden;
 }
@@ -286,14 +286,16 @@ address {
      z-index: 500;
      color: white;
      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    @media (max-width: 768px) {
+
+    @media (max-width: 425px) {
+      top: 51.4%;
+      left: 51.3%; 
+    @media (max-width: 425px) {
       font-size: 3rem;
       line-height: calc(60 / 30);
-      top: 51.4%;
-     left: 51.3%;
   }
 }
-
+}
 .bottom_title {
   padding-top: 0.9rem;
   @media (max-width: 768px) {
@@ -312,8 +314,14 @@ address {
 
   picture {
     width: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
   }
+}
+
+.fv_slider_items img {
+  width: 100%;
+  height: auto;
 }
 
 .fv_slider_items::before {
@@ -331,7 +339,23 @@ address {
 .about {
   width: 100%;
   height: auto;
+}
+
+.about_content {
+  width: 100%;
+  height: 100%;
   position: relative;
+}
+
+.about img {
+  width: 100%;
+  height: auto;
+
+  picture {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
 .about_textarea {
@@ -339,17 +363,26 @@ address {
   height: 28rem;
   writing-mode: vertical-rl;
   position: absolute;
-  top: 50%;
+  bottom: 49.3%;
   right: 39.8%;
-  transform: translateY(-50%);
+  transform: translateY(50%);
+ 
+ 
   @media (max-width:768px) {
        display: flex;
        width: 100%;
-       height: 100%;
-       top: 50%;
+       height: auto;
+       bottom: 55%;
        right: 0;
        left: 0;
       align-items: center;
+      }
+  @media (max-width:425px) {
+       width: 100%;
+       height: 100%;
+       bottom: 50%;
+       right: 0;
+       left: 0;
       }
 }
 
@@ -357,13 +390,28 @@ address {
   font-size: 3rem;
   letter-spacing: 0.5rem;
   padding-left: 3.75rem;
+
   @media (max-width:830px) {
        padding-left: 2.5rem;
       }
+
   @media (max-width:768px) {
-       font-size: 2.5rem;
        letter-spacing: 0.5rem;
+       padding-top: 4rem;
+       padding-left: 0;
+       height: 100%;
+       white-space: nowrap;
+      }
+      
+  @media (max-width:425px) {
+       font-size: 2.5rem;
        padding-top: 9%;
+       padding-left: 0;
+       height: 54%;
+      }
+   @media (max-width:374px) {
+       font-size: 2.3rem;
+       padding-top: 5%;
        padding-left: 0;
        height: 54%;
       }
@@ -377,10 +425,16 @@ address {
        line-height: 2.3;
       }
   @media (max-width:768px) {
-    height: 46%;
+    height: 100%;
+    padding-top: 4rem;
+    white-space: nowrap;
+      }
+  @media (max-width:425px) {
     font-size: 1.6rem;
-    letter-spacing: 0.4rem;
     line-height: 1.63;
+    letter-spacing: 0.4rem;
+    padding-top: 2.1rem;
+    height: 54%;
       }
 }
 
@@ -431,6 +485,16 @@ address {
   height: auto;
   z-index: 2;
   position: relative;
+
+  @media (max-width:910px) {
+      width: 55rem;
+      }
+      @media (max-width:850px) {
+      width: 50rem;
+      }
+      @media (max-width:800px) {
+      width: 45rem;
+      }
    @media (max-width:768px) {
       width: 100%;
       }
@@ -463,6 +527,13 @@ address {
   color: white;
   padding-top: 5rem;
   padding-left: 22rem;
+
+   @media (max-width:850px) {
+      width: 45rem;
+      height: 20rem;
+      padding-top: 3rem;
+      padding-left: 17rem;
+      }
   @media (max-width:768px) {
       position: static;
       width: 100%;
@@ -485,14 +556,11 @@ address {
   color: white;
   padding-top: 5rem;
   padding-left: 4rem;
-   @media (max-width:855px) {
+
+   @media (max-width:850px) {
       width: 45rem;
       height: 20rem;
        padding-top: 3rem;
-      }
-  @media (max-width:805px) {
-      width: 40rem;
-
       }
   @media (max-width:768px) {
        @media (max-width:768px) {
@@ -551,6 +619,11 @@ address {
       }
 }
 
+.works_contents_img img {
+  width: 100%;
+  height: auto;
+}
+
 .works_contents_text {
   padding-top: 1.9rem;
   @media (max-width:910px) {
@@ -578,12 +651,12 @@ address {
   width: 100%;
   height: 100%;
   background: grey;
-  opacity: .6;
-  display: none;
-  z-index: 0;
+  opacity: 0.6;
+  z-index: 1500;
   top: 0;
   left: 0;
   right: 0;
+  display: none;
 }
 
 .modal {
@@ -595,6 +668,8 @@ address {
   transform: translate(-50%, -50%);
   background: white;
   display: none;
+  z-index: 1501;
+
 
   @media (max-width:768px) {
     width: 70%;
@@ -650,6 +725,10 @@ address {
   gap: 6rem;
   width: 100%;
   margin-top: 6.8rem;
+
+  @media (max-width:939px) {
+      gap: 2rem;
+      }
   @media (max-width:768px) {
       display: block;
       margin-top: 3.75rem;
@@ -698,6 +777,9 @@ address {
   display: flex;
   gap: 7rem;
   padding-block: 1.3rem 1.25rem;
+  @media (max-width:939px) {
+      gap: 5rem;
+      }
   @media (max-width:768px) {
       gap: 1.9rem;
       }
@@ -766,6 +848,17 @@ address {
   z-index: 1;
   width: 60rem;
   height: 40rem;
+
+  @media (max-width:910px) {
+      width: 55rem;
+      }
+  @media (max-width:850px) {
+      width: 50rem;
+      height: 35rem;
+      }
+   @media (max-width:800px) {
+      width: 45rem;
+      }
   @media (max-width:768px) {
       width: 100%;
       height: 30rem;
@@ -788,6 +881,13 @@ address {
   padding-top: 4.9rem;
   padding-left: 22rem;
   color: white;
+
+  @media (max-width:850px) {
+      width: 45rem;
+      height: 23rem;
+      padding-top: 3rem;
+      padding-left: 17rem;
+      }
   @media (max-width:768px) {
       position: static;
       width: 100%;
@@ -822,6 +922,17 @@ address {
   text-decoration: none !important;
 }
 
+.number a:hover {
+  cursor: auto;
+  opacity: 1;
+   @media (max-width:768px) {
+      cursor: pointer;
+      opacity: .6;
+      transition: all 1s;
+      }
+}
+
+
 .mail_address {
   padding-top: 1.6rem;
   @media (max-width:768px) {
@@ -851,7 +962,9 @@ address {
 }
 
 .contact_content {
-  padding-inline: 6rem;
+  max-width: 800px;
+  padding-inline: 0rem;
+  margin-inline: auto;
   margin-top: 3.5rem;
   @media (max-width:768px) {
       padding-inline: 0;
@@ -861,6 +974,11 @@ address {
 .contact_content p {
   font-size: 2rem;
   line-height: calc(33 / 20);
+
+  @media (max-width:374px) {
+      font-size: 1.8rem;
+      line-height: calc(33 / 18);
+      }
 }
 
 .contact_form {
@@ -883,6 +1001,9 @@ address {
 .contact_form_name label {
   width: 17rem;
   font-size: 2rem;
+   @media (max-width:374px) {
+      font-size: 1.8rem;
+      }
 }
 
 .contact_form_name input {
@@ -910,6 +1031,9 @@ address {
   @media (max-width:768px) {
       width: 9rem;
       }
+   @media (max-width:374px) {
+      font-size: 1.8rem;
+      }
 }
 
 .contact_form_gender label {
@@ -922,6 +1046,12 @@ address {
   cursor: pointer;
   @media (max-width:768px) {
       margin-right: 3rem;
+      }
+   @media (max-width:374px) {
+      font-size: 1.6rem;
+      line-height: calc(25 / 16);
+      margin-right: 1.5rem;
+      gap: 1.5rem;
       }
 }
 
@@ -963,6 +1093,9 @@ input[type="radio"]:checked:before {
   width: 17rem;
   font-size: 2rem;
   letter-spacing: -0.03em;
+   @media (max-width:374px) {
+      font-size: 1.8rem;
+      }
 }
 
 .contact_form_email input {
@@ -991,6 +1124,9 @@ input[type="radio"]:checked:before {
 .contact_form_inquiry-type label {
   width: 17rem;
   font-size: 2rem;
+   @media (max-width:374px) {
+      font-size: 1.8rem;
+      }
 }
 
 .contact_form_inquiry-type select {
@@ -1037,6 +1173,10 @@ input[type="radio"]:checked:before {
 .contact_form_message label {
   font-size: 2rem;
   line-height: calc(33 / 20);
+   @media (max-width:374px) {
+      font-size: 1.8rem;
+      line-height: calc(33 / 18);
+      }
 }
 
 textarea {
@@ -1048,6 +1188,9 @@ textarea {
   background-color: white;
   @media (max-width:768px) {
       margin-top: 0;
+      }
+   @media (max-width:374px) {
+      padding: 1.5rem;
       }
 }
 
@@ -1063,6 +1206,10 @@ textarea {
   line-height: calc(33 / 20);
   @media (max-width:768px) {
       line-height: calc(27 / 20);
+      }
+   @media (max-width:374px) {
+      font-size: 1.8rem;
+      line-height: calc(27 / 18);
       }
 }
 
@@ -1086,10 +1233,16 @@ textarea {
   align-items: center;
   gap: 2rem;
   cursor: pointer;
+
   @media (max-width:768px) {
       font-size: 1.6rem;
       line-height: 1;
       gap: 1rem;
+      }
+  @media (max-width:374px) {
+      font-size: 1.4rem;
+      line-height: calc(25 / 14);
+      gap: 0.5rem;
       }
 }
 
@@ -1124,6 +1277,11 @@ input[type="checkbox"]:checked:before {
 .contact_form_privacy p {
   font-size: 2rem;
   line-height: calc(33 / 20);
+
+  @media (max-width:374px) {
+      font-size: 1.8rem;
+      line-height: calc(33 / 18);
+      }
 }
 
 .contact_form_privacy_container {
@@ -1138,28 +1296,41 @@ input[type="checkbox"]:checked:before {
       height: 32.3rem;
       padding: 3rem 5rem 3rem 3rem;
       }
+  @media (max-width:374px) {
+       padding: 2rem 4rem 2rem 2rem;
+      }
 }
 
 .contact_form_privacy_container .simplebar-scrollbar {
     background-color: #9B9B9B !important;
-    height: 3rem;
+    height: 3rem !important;
 }
 
 .contact_form_privacy_container .simplebar-scrollbar::before {
     background-color: #9B9B9B !important;
-    height: 3rem;
+    height: 2rem;
 }
 
 .contact_form_privacy_container .simplebar-track {
     background-color: #E3E3E3;
     height: 28rem;
     margin: 1rem 1rem 1rem 0;
+
+    @media (max-width:768px) {
+      height: 29rem;
+      margin: 1rem 1rem 2.3rem 0;
+      }
 }
 
 .contact_form_privacy_container p {
   white-space: pre-wrap;
   font-size: 1.8rem;
   line-height: calc(31 / 18);
+
+  @media (max-width:768px) {
+    font-size: 1.6rem;
+    line-height: calc(33 / 16);
+  }
 }
 
 .contact_form_button {
@@ -1290,6 +1461,10 @@ input[type="checkbox"]:checked:before {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
+
+   @media (max-width:768px) {
+     right: 2rem;
+      }
 }
 
 .top_icon.show {
@@ -1309,6 +1484,7 @@ input[type="checkbox"]:checked:before {
   100% { transform: translateY(0); }
 }
 
+//スクロールアニメーション
 .fadein-target {
   opacity: 0;
   transform: translateY(30px);

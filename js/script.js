@@ -45,6 +45,7 @@ $(function () {
 
     modal.addClass("open");
     overlay.addClass("open");
+    $('body').addClass('modal-open'); // ← スクロール禁止
   });
 
   close.on('click', function () {
@@ -57,6 +58,7 @@ $(function () {
     overlay.removeClass("open");
   });
 });
+
 
 //top_icon
 $(function () {
