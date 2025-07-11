@@ -77,6 +77,24 @@ $(function () {
   });
 });
 
+$(function () {
+    $(window).on('scroll', function () {
+      $('.fadein-target').each(function () {
+        const elemPos = $(this).offset().top;
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+
+        // 表示条件：スクロール位置が要素より下に来たら
+        if (scroll > elemPos - windowHeight + 100) {
+          $(this).addClass('show');
+        } else {
+          // 上にスクロールして画面外に出たら非表示に戻す
+          $(this).removeClass('show');
+        }
+      });
+    });
+  });
+
 //COMPANYのaccess
  document.addEventListener('DOMContentLoaded', () => {
   const TEL_NUMBER = '00000000000';

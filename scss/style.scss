@@ -1308,3 +1308,14 @@ input[type="checkbox"]:checked:before {
   75% { transform: translateY(7px); }
   100% { transform: translateY(0); }
 }
+
+.fadein-target {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fadein-target.show {
+  opacity: 1;
+  transform: translateY(0);
+}
