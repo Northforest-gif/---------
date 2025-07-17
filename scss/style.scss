@@ -15,9 +15,9 @@ html {
 body {
   font-size: 1.6rem;
   font-weight: 500;
-  color: #000000;
+  color: black;
   font-family: "YuMincho", "游明朝", "Hiragino Mincho Pro", serif;
-  background: $light-green;
+  background: white;
   line-height: calc(25/16);
   overflow-x: hidden;
 }
@@ -339,6 +339,7 @@ address {
 .about {
   width: 100%;
   height: auto;
+  background-color: $light-green;
 }
 
 .about_content {
@@ -584,6 +585,10 @@ address {
       font-size: 2rem;
       line-height: calc(25 / 20);
       }
+   @media (max-width:374px) {
+      font-size: 1.8rem;
+      line-height: calc(25 / 18);
+      }
 }
 
 .service_contents_textarea p,
@@ -593,6 +598,10 @@ address {
    @media (max-width:768px) {
       padding-top: 1.44rem;
       line-height: calc(25 / 16);
+      }
+   @media (max-width:374px) {
+      font-size: 1.5rem;
+      line-height: calc(25 / 15);
       }
 }
 
@@ -799,6 +808,11 @@ address {
   -webkit-line-clamp: 2;         /* 2行で切る */
   -webkit-box-orient: vertical;
   overflow: hidden;
+
+  @media (max-width:374px) {
+      font-size: 1.6rem;
+      line-height: calc(25 / 16);
+      }
 }
 
 .more_icon {
@@ -978,6 +992,10 @@ address {
   @media (max-width:374px) {
       font-size: 1.8rem;
       line-height: calc(33 / 18);
+      }
+  @media (max-width:374px) {
+      font-size: 1.6rem;
+      line-height: calc(25 / 16);
       }
 }
 

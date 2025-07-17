@@ -15,9 +15,9 @@ html {
 body {
   font-size: 1.6rem;
   font-weight: 500;
-  color: #000000;
+  color: black;
   font-family: "YuMincho", "游明朝", "Hiragino Mincho Pro", serif;
-  background: rgba(77, 150, 0, 0.1019607843);
+  background: white;
   line-height: 1.5625;
   overflow-x: hidden;
 }
@@ -379,6 +379,7 @@ address {
 .about {
   width: 100%;
   height: auto;
+  background-color: rgba(77, 150, 0, 0.1019607843);
 }
 
 .about_content {
@@ -678,6 +679,13 @@ address {
     line-height: 1.25;
   }
 }
+@media (max-width: 374px) {
+  .service_contents_textarea h2,
+  .reverse_service_contents_textarea h2 {
+    font-size: 1.8rem;
+    line-height: 1.3888888889;
+  }
+}
 
 .service_contents_textarea p,
 .reverse_service_contents_textarea p {
@@ -689,6 +697,13 @@ address {
   .reverse_service_contents_textarea p {
     padding-top: 1.44rem;
     line-height: 1.5625;
+  }
+}
+@media (max-width: 374px) {
+  .service_contents_textarea p,
+  .reverse_service_contents_textarea p {
+    font-size: 1.5rem;
+    line-height: 1.6666666667;
   }
 }
 
@@ -932,6 +947,12 @@ address {
   -webkit-line-clamp: 2; /* 2行で切る */
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+@media (max-width: 374px) {
+  .news_content_text {
+    font-size: 1.6rem;
+    line-height: 1.5625;
+  }
 }
 
 .more_icon {
@@ -1179,6 +1200,12 @@ address {
   .contact_content p {
     font-size: 1.8rem;
     line-height: 1.8333333333;
+  }
+}
+@media (max-width: 374px) {
+  .contact_content p {
+    font-size: 1.6rem;
+    line-height: 1.5625;
   }
 }
 
