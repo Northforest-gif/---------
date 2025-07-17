@@ -696,6 +696,11 @@ address {
   right: 0.2rem;
   font-size: 2.5rem;
   line-height: 1;
+  color: black!important;
+  -webkit-appearance: none;
+  appearance: none;
+   -moz-appearance: none;
+  text-decoration: none; 
 }
 
 .modal_img {
@@ -1155,6 +1160,10 @@ input[type="radio"]:checked:before {
   background-color: white;
   font-size: 1.8rem;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: black !important; 
   @media (max-width:768px) {
       width: 100%;
       font-size: 1.6rem;
@@ -1204,6 +1213,10 @@ textarea {
   margin-top: 1rem;
   font-size: 1.8rem;
   background-color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  border-radius: 0;  
   @media (max-width:768px) {
       margin-top: 0;
       }
