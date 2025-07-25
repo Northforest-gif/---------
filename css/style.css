@@ -3,28 +3,84 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 8rem;
   overflow-x: hidden;
-}
-@media (max-width: 768px) {
-  html {
-    scroll-padding-top: 5rem;
-  }
 }
 
 body {
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 400;
   color: black;
-  font-family: "YuMincho", "游明朝", "Hiragino Mincho Pro", serif;
+  font-family: "YuMincho", "游明朝", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "MS PMincho", serif;
   background: white;
   line-height: 1.5625;
   overflow-x: hidden;
 }
 
+#about {
+  scroll-margin-top: 8rem;
+}
+@media (max-width: 768px) {
+  #about {
+    scroll-margin-top: 5rem;
+  }
+}
+
+#service {
+  scroll-margin-top: 8rem;
+}
+@media (max-width: 768px) {
+  #service {
+    scroll-margin-top: 5rem;
+  }
+}
+
+#works {
+  scroll-margin-top: 8rem;
+}
+@media (max-width: 768px) {
+  #works {
+    scroll-margin-top: 5rem;
+  }
+}
+
+#news {
+  scroll-margin-top: 8rem;
+}
+@media (max-width: 768px) {
+  #news {
+    scroll-margin-top: 5rem;
+  }
+}
+
+#company {
+  scroll-margin-top: 8rem;
+}
+@media (max-width: 768px) {
+  #company {
+    scroll-margin-top: 5rem;
+  }
+}
+
+#contact {
+  scroll-margin-top: 8rem;
+}
+@media (max-width: 768px) {
+  #contact {
+    scroll-margin-top: 5rem;
+  }
+}
+
+body.modal-open {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 a:hover {
   opacity: 0.7;
@@ -126,8 +182,11 @@ address {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 940px;
-  height: 100%;
+  height: 8rem;
   margin: 0 auto;
   padding-inline: 1rem;
   -webkit-box-sizing: border-box;
@@ -136,19 +195,27 @@ address {
 @media (max-width: 768px) {
   .header_inner {
     padding-inline: 0;
+    height: 5rem;
   }
 }
 .header_logo {
-  font-size: 2rem;
   color: white;
   height: 100%;
-  padding-top: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 768px) {
   .header_logo {
-    padding-left: 2rem;
-    padding-top: 0.9rem;
+    margin-left: 2rem;
   }
+}
+.header_logo h1 {
+  font-size: 2rem;
+  font-weight: 400;
 }
 .header_nav {
   height: 100%;
@@ -159,6 +226,9 @@ address {
   display: flex;
   gap: 3.11rem;
   height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 910px) {
   .header_nav ul {
@@ -176,21 +246,33 @@ address {
     padding: 0;
     position: absolute;
     top: 5rem;
-    right: 0;
+    right: -100%;
     background-color: #4D9600;
     width: 30rem;
     height: 34.8rem;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transition: right 0.3s ease;
+    transition: right 0.3s ease;
+  }
+}
+.header_nav ul li {
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .header_nav ul li {
+    height: auto;
   }
 }
 .header_nav a {
   font-size: 1.8rem;
   color: white;
-  height: 100%;
   position: relative;
-  display: inline-block;
-  padding-top: 2.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 @media (max-width: 768px) {
   .header_nav a {
@@ -198,13 +280,10 @@ address {
     padding: 0rem 0rem 0rem 2rem;
     width: 100%;
     height: 5.8rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
+}
+.header_nav a:hover {
+  opacity: 1;
 }
 .header_nav a::after {
   content: "";
@@ -239,8 +318,7 @@ address {
 }
 
 .header_nav_list.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  right: 0;
 }
 
 .header_hamburger {
@@ -266,21 +344,21 @@ address {
   position: absolute;
   left: 2rem;
   border-radius: 0.2rem;
-  -webkit-transition: ease 0.4s;
-  transition: ease 0.4s;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
   display: block;
 }
 
 .header_hamburger span:nth-child(1) {
-  top: 0.9rem;
+  top: 1rem;
 }
 
 .header_hamburger span:nth-child(2) {
-  top: 2.1rem;
+  top: 2.3rem;
 }
 
 .header_hamburger span:nth-child(3) {
-  top: 3.3rem;
+  top: 3.6rem;
 }
 
 .header_hamburger.active span:nth-child(1) {
@@ -319,7 +397,7 @@ address {
   letter-spacing: 0.3em;
   z-index: 500;
   color: white;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0.5rem 0.5rem 0.5rem black;
 }
 @media (max-width: 425px) {
   .fv_title {
@@ -511,11 +589,11 @@ address {
 }
 
 .service_contents {
-  padding-top: 6.8rem;
+  margin-top: 6.8rem;
 }
 @media (max-width: 768px) {
   .service_contents {
-    padding-top: 3.8rem;
+    margin-top: 3.8rem;
   }
 }
 
@@ -543,6 +621,11 @@ address {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
+@media (max-width: 857px) {
+  .reverse_service_contents_item {
+    margin-block: 0rem;
+  }
+}
 @media (max-width: 768px) {
   .reverse_service_contents_item {
     display: block;
@@ -564,16 +647,16 @@ address {
     width: 55rem;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 857px) {
   .service_contents_img img,
   .reverse_service_contents_img img {
     width: 50rem;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .service_contents_img img,
   .reverse_service_contents_img img {
-    width: 45rem;
+    width: 46rem;
   }
 }
 @media (max-width: 768px) {
@@ -615,7 +698,7 @@ address {
   padding-top: 5rem;
   padding-left: 22rem;
 }
-@media (max-width: 850px) {
+@media (max-width: 855px) {
   .service_contents_textarea {
     width: 45rem;
     height: 20rem;
@@ -647,7 +730,7 @@ address {
   padding-top: 5rem;
   padding-left: 4rem;
 }
-@media (max-width: 850px) {
+@media (max-width: 855px) {
   .reverse_service_contents_textarea {
     width: 45rem;
     height: 20rem;
@@ -723,6 +806,9 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 4rem;
   margin-top: 6.8rem;
 }
@@ -762,19 +848,25 @@ address {
 
 .works_contents_item {
   cursor: pointer;
+  width: 20rem;
+}
+@media (max-width: 768px) {
+  .works_contents_item {
+    width: 100%;
+  }
 }
 
 .works_contents_item:hover {
   opacity: 0.7;
-  -webkit-transition: all 0.4 ease;
-  transition: all 0.4 ease;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
 }
 
 .overlay {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: grey;
+  background: rgba(0, 0, 0, 0.5);
   opacity: 0.6;
   z-index: 1500;
   top: 0;
@@ -797,7 +889,7 @@ address {
 }
 @media (max-width: 768px) {
   .modal {
-    width: 70%;
+    width: 84%;
     height: auto;
   }
 }
@@ -817,6 +909,13 @@ address {
   appearance: none;
   -moz-appearance: none;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .modal-close {
+    font-size: 2rem;
+    top: 0;
+    right: 0rem;
+  }
 }
 
 .modal_img {
@@ -1055,21 +1154,24 @@ address {
   z-index: 1;
   width: 60rem;
   height: 40rem;
+  overflow: hidden;
 }
 @media (max-width: 910px) {
   .map {
     width: 55rem;
+    height: 36.7rem;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 857px) {
   .map {
     width: 50rem;
-    height: 35rem;
+    height: 33.3rem;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .map {
-    width: 45rem;
+    width: 46rem;
+    height: 30.7rem;
   }
 }
 @media (max-width: 768px) {
@@ -1083,6 +1185,7 @@ address {
 .map iframe {
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 .company_access {
@@ -1114,8 +1217,8 @@ address {
   }
 }
 
-.company_access h2 {
-  font-size: 2rem;
+.company_name {
+  font-size: 2rem !important;
   font-weight: 600;
   line-height: 1.65;
 }
@@ -1216,11 +1319,11 @@ address {
 
 .contact_form {
   width: 100%;
-  margin-top: 7rem;
+  padding-top: 7rem;
 }
 @media (max-width: 768px) {
   .contact_form {
-    margin-top: 4.2rem;
+    padding-top: 4.2rem;
   }
 }
 
@@ -1442,7 +1545,7 @@ input[type=radio]:checked:before {
   content: "";
   position: absolute;
   top: 54%;
-  right: 2.1rem;
+  right: 2.15rem;
   width: 1.7rem;
   height: 1.2rem;
   background-color: #4D9600;
@@ -1485,6 +1588,8 @@ input[type=radio]:checked:before {
 textarea {
   width: 100%;
   height: 20rem;
+  resize: vertical;
+  min-height: 20rem;
   padding: 2rem;
   margin-top: 1rem;
   font-size: 1.8rem;
@@ -1534,13 +1639,14 @@ textarea {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  margin-top: 1rem;
+  justify-items: start;
+  padding-top: 1rem;
 }
 @media (max-width: 768px) {
   .contact_form-checkbox {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin-top: 0.3rem;
+    padding-top: 0.3rem;
   }
 }
 
@@ -1673,10 +1779,13 @@ input[type=checkbox]:checked:before {
 
 .contact_form_button {
   margin-top: 8rem;
-  margin-left: 25rem;
-  width: 30rem;
-  height: 5rem;
-  background-color: #4D9600;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1685,26 +1794,27 @@ input[type=checkbox]:checked:before {
 @media (max-width: 768px) {
   .contact_form_button {
     margin-top: 5rem;
-    margin-left: 0;
     width: 100%;
   }
 }
 
 .contact_form_button button {
+  width: 30rem;
+  height: 5rem;
   color: white;
-  width: 100%;
+  background-color: #4D9600;
+  border: 1px solid;
+  border-color: #4D9600;
   font-size: 2rem;
   line-height: 2.5;
   font-weight: 600;
-  border: 0.1rem solid transparent;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact_form_button button:hover {
   background-color: white;
   color: #4D9600;
-  border-color: #4D9600;
 }
 
 /*FOOTER*/
@@ -1733,6 +1843,7 @@ input[type=checkbox]:checked:before {
 }
 
 .footer_logo a {
+  display: inline;
   font-size: 2rem;
   line-height: 1.65;
   color: black;
@@ -1828,6 +1939,7 @@ input[type=checkbox]:checked:before {
   visibility: hidden;
   -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
   transition: opacity 0.4s ease, visibility 0.4s ease;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .top_icon {

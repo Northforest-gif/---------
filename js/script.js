@@ -18,7 +18,10 @@ const nav = $('.js-nav'); //js-navの要素を取得し、変数navに格納
 ham.on('click', function () { //ハンバーガーメニューをクリックしたら
     ham.toggleClass('active'); // ハンバーガーメニューにactiveクラスを付け外し
     nav.toggleClass('active');
- 
+});
+nav.on('click', function () {
+  ham.removeClass('active');
+  nav.removeClass('active');
 });
  
  //FV slick
@@ -36,27 +39,42 @@ $(function () {
   const overlay = $("#js-overlay");
   const close = $("#js-close");
 
-  $('.modal-trigger').on('click', function () {
+  let scrollY;
+
+  $('.modal-trigger').on('click', function (e) {
+    e.preventDefault(); // ← ページ上部にジャンプするのを防ぐ
+
     const imgSrc = $(this).data('img');
     const text = $(this).data('text');
 
     $('#modal-img').attr('src', imgSrc);
     $('#modal-text').text(text);
 
+    scrollY = window.scrollY || window.pageYOffset;
+
+    // スクロールを固定する
+    $('body').addClass('modal-open').css({
+      top: `-${scrollY}px`
+    });
+
     modal.addClass("open");
     overlay.addClass("open");
-    $('body').addClass('modal-open'); // ← スクロール禁止
   });
 
-  close.on('click', function () {
+  const closeModal = () => {
     modal.removeClass("open");
     overlay.removeClass("open");
-  });
 
-  overlay.on('click', function () {
-    modal.removeClass("open");
-    overlay.removeClass("open");
-  });
+    // スクロール位置を戻す
+    $('body').removeClass('modal-open').removeAttr('style');
+    window.scrollTo({
+      top: scrollY,
+      behavior: 'instant' // または 'auto'
+    });
+  };
+
+  close.on('click', closeModal);
+  overlay.on('click', closeModal);
 });
 
 
@@ -97,6 +115,10 @@ $(function () {
     });
   });
 
+  $topIcon.off('click').on('click', function () {
+  $('html, body').animate({ scrollTop: 0 }, 200);
+});
+
 //COMPANYのaccess
  document.addEventListener('DOMContentLoaded', () => {
   const TEL_NUMBER = '00000000000';
@@ -134,3 +156,6 @@ function validateCheckbox() {
   }
   return true;
 };
+
+//アンカーリンクスクロール
+
