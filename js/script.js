@@ -91,9 +91,14 @@ $(function () {
     }
   });
 
+  $topIcon.on('touchstart', function () {
+    // 何も入れなくてもOK（"反応させる"ためのダミー）
+  });
+
   // スクロールでトップに戻る
-  $topIcon.on('click', function () {
-    $('html, body').animate({ scrollTop: 0 }, 200);
+  $(document).on('click', '#top_icon', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 300);
   });
 });
 
@@ -114,10 +119,6 @@ $(function () {
       });
     });
   });
-
-  $topIcon.off('click').on('click', function () {
-  $('html, body').animate({ scrollTop: 0 }, 200);
-});
 
 //COMPANYのaccess
  document.addEventListener('DOMContentLoaded', () => {
@@ -156,6 +157,3 @@ function validateCheckbox() {
   }
   return true;
 };
-
-//アンカーリンクスクロール
-
