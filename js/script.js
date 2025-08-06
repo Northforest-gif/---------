@@ -57,6 +57,8 @@ $(function () {
       top: `-${scrollY}px`
     });
 
+    $('header').addClass('open');
+
     modal.addClass("open");
     overlay.addClass("open");
   });
@@ -64,6 +66,7 @@ $(function () {
   const closeModal = () => {
     modal.removeClass("open");
     overlay.removeClass("open");
+    $('header').removeClass('open');
 
     // スクロール位置を戻す
     $('body').removeClass('modal-open').removeAttr('style');

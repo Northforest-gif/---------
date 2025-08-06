@@ -340,6 +340,10 @@ address {
   background-color: #4D9600;
 }
 
+.header.open {
+  background-color: #4D9600;
+}
+
 .header_nav_list.active {
   right: 0;
 }
@@ -684,21 +688,21 @@ address {
 }
 
 .service_contents_img p {
-  padding-top: 1.9rem;
+  margin-top: 1.9rem;
 }
 @media (max-width: 768px) {
   .service_contents_img p {
-    padding-top: 0.6rem;
+    margin-top: 0.6rem;
   }
 }
 
 .reverse_service_contents_img p {
-  padding-top: 1.9rem;
+  margin-top: 1.9rem;
   text-align: right;
 }
 @media (max-width: 768px) {
   .reverse_service_contents_img p {
-    padding-top: 0.6rem;
+    margin-top: 0.6rem;
     text-align: left;
   }
 }
