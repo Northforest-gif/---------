@@ -1,16 +1,36 @@
  //js-header
  // スクロールするとロゴの色変更
-  $(function () {
-    const targetOffset = $(".about").offset().top - 80;
+$(function () {
+  const $target = $("#about");
+  const $header = $(".js-header");
 
-    $(window).on("scroll", function () {
-      if ($(window).scrollTop() >= targetOffset) {
-        $(".js-header").addClass("scrolled");
-      } else {
-        $(".js-header").removeClass("scrolled");
-      }
-    });
+  let targetOffset = $target.offset().top;
+
+  const updateOffset = () => {
+    targetOffset = $target.offset().top;
+  };
+
+  const checkScroll = () => {
+    const scrollTop = $(window).scrollTop();
+    if (scrollTop >= targetOffset) {
+      $header.addClass("scrolled");
+    } else {
+      $header.removeClass("scrolled");
+    }
+  };
+
+  $(window).on("scroll", checkScroll);
+
+  $(window).on("resize", function () {
+    updateOffset();
+    checkScroll();
   });
+
+  $(window).on("load", function () {
+    updateOffset();
+    checkScroll();
+  });
+});
 
   //js-hamburger
   const ham = $('.js-hamburger'); //js-hamburgerの要素を取得し、変数hamに格納
