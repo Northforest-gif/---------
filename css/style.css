@@ -330,8 +330,6 @@ address {
   .header .header_nav a:hover {
     opacity: 1;
     background-color: black;
-    -webkit-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
   }
 }
 
@@ -1304,8 +1302,6 @@ address {
   .number a:hover {
     cursor: pointer;
     opacity: 0.6;
-    -webkit-transition: all 1s;
-    transition: all 1s;
   }
 }
 
@@ -1316,8 +1312,6 @@ address {
 .mail_address a {
   color: white;
   text-decoration: none !important;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 .mail_address a:hover {
