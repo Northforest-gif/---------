@@ -281,9 +281,9 @@ address {
   }
 
   .header_nav a:hover {
+     opacity: 1;
     @media (max-width:768px) {
-      opacity: 1;
-      background-color: black;
+     background-color: black;
     }
   }
 }
@@ -775,7 +775,6 @@ address {
 
 .works_contents_item:hover {
   opacity: 0.7;
-  transition: all 0.3s ease;
 }
 
 .overlay {
