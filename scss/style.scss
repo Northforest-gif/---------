@@ -434,20 +434,8 @@ address {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 22.5%;
-  right: -12.5%;
-
-  @media (max-width:768px) {
-    top: 20%;
-    right: 0;
-    left: 0;
-  }
-   @media (max-width:530px) {
-    top: 13%;
-   }
-  @media (max-width:456px) {
-    top: 0;
-   }
+  top: 0;
+  right: 0;
 }
 
 .about img {
@@ -463,21 +451,19 @@ address {
 }
 
 .about_textarea {
-  width: auto;
-  height: 28rem;
+  width: 100%;
+  height: 100%;
   writing-mode: vertical-rl;
- 
-  
+  padding-top: 10.5%;
+  padding-right: 39.8%;
 
   @media (max-width:768px) {
-       display: flex;
-       width: 100%;
-       height: auto;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      }
-  @media (max-width:456px) {
-       width: 100%;
-       height: 100%;
+      padding-right: 0;
+      padding-top: 0;
+      gap: 3.3%;
       }
 }
 
@@ -487,27 +473,21 @@ address {
   margin-left: 3.75rem;
 
   @media (max-width:910px) {
-       margin-left: 2.5rem;
-       font-size: 2.8rem;
+        font-size: 2.8rem;
+        margin-left: 2.5rem;
       }
-
   @media (max-width:768px) {
        letter-spacing: 0.5rem;
        font-size: 3rem;
-       margin-left: 0;
-       height: 100%;
+       margin: 0;
        white-space: nowrap;
       }
       
   @media (max-width:456px) {
        font-size: 2.5rem;
-       padding-top: 9%;
-       height: 54%;
       }
    @media (max-width:374px) {
        font-size: 2.3rem;
-       padding-top: 6%;
-       height: 54%;
       }
 }
 
@@ -515,22 +495,20 @@ address {
   font-size: 1.8rem;
   letter-spacing: 0.7rem;
   line-height: 2.66;
+  margin: 0;
+
   @media (max-width:910px) {
-       line-height: 2.3;
-       font-size: 1.6rem;
+    line-height: 2.3;
+    font-size: 1.6rem;
       }
   @media (max-width:768px) {
     font-size: 1.8rem;
-    height: 100%;
-    margin-top: 4%;
     white-space: nowrap;
       }
   @media (max-width:456px) {
     font-size: 1.6rem;
     line-height: 1.63;
     letter-spacing: 0.4rem;
-    margin-top: 4%;
-    height: 54%;
       }
 }
 
@@ -738,11 +716,12 @@ address {
 .works_contents {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 4rem;
+  gap: 4.35%;
   margin-top: 6.8rem;
-  @media (max-width:934px) {
-    gap: 2.5rem;
-  }
+
+  @media (max-width:938px) {
+     gap: 4%;
+      }
    @media (max-width:768px) {
      margin-top: 3.8rem;
      grid-template-columns: 1fr;
@@ -757,7 +736,7 @@ address {
 
 .works_contents_text {
   margin-top: 1.9rem;
-  @media (max-width:934px) {
+  @media (max-width:938px) {
       font-size: 1.3rem;
       }
    @media (max-width:768px) {
@@ -840,11 +819,11 @@ address {
 }
 
 .modal_item p {
-  padding-left: 1.5rem;
+  padding-inline: 1.5rem;
   margin-bottom: 0.6rem;
 
    @media (max-width:425px) {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -868,13 +847,10 @@ address {
 .news_content_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  gap: 6.5%;
   width: 100%;
   margin-top: 6.8rem;
 
-  @media (max-width:939px) {
-      gap: 2rem;
-      }
   @media (max-width:768px) {
       display: grid;
       grid-template-columns: 1fr;
@@ -1083,7 +1059,7 @@ address {
   opacity: 1;
    @media (max-width:768px) {
       cursor: pointer;
-      opacity: .6;
+      opacity: 0.7;
       }
 }
 
@@ -1097,9 +1073,7 @@ address {
   text-decoration: none !important;
 }
 
-.mail_address a:hover {
-  opacity: .5;
-}
+
 
 /*CONTACT*/
 .contact {
@@ -1162,13 +1136,11 @@ address {
 }
 
 .contact_form_name input {
-  width: 63rem;
+  flex: 1;
+  width: 100%;
   height: 5rem;
   padding: 1.3rem 2rem;
   background-color: white;
-  @media (max-width:768px) {
-      width: 100%;
-      }
 }
 
 .contact_form_gender {
@@ -1181,7 +1153,7 @@ address {
 }
 
 .contact_form_gender p {
-   width: 17.3rem;
+  width: 17.3rem;
   font-size: 2rem;
   @media (max-width:768px) {
       width: 9rem;
@@ -1259,13 +1231,11 @@ input[type="radio"]:checked::before {
 }
 
 .contact_form_email input {
-  width: 63rem;
+  flex: 1;
+  width: 100%;
   height: 5rem;
   padding: 1.3rem 2rem;
   background-color: white;
-  @media (max-width:768px) {
-      width: 100%;
-      }
 }
 
 .contact_form_inquiry-type {
@@ -1291,7 +1261,8 @@ input[type="radio"]:checked::before {
 
 .contact_form_inquiry-type select {
   appearance: none;
-  width: 63rem;
+  flex: 1;
+  width: 100%;
   height: 5rem;
   padding: 0 2rem;
   background-color: white;
@@ -1302,7 +1273,6 @@ input[type="radio"]:checked::before {
   -moz-appearance: none;
   color: black !important; 
   @media (max-width:768px) {
-      width: 100%;
       font-size: 1.6rem;
       }
 }
@@ -1388,7 +1358,7 @@ textarea {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   justify-items: start;
-  margin-top: 1.25rem;
+  margin-top: 1.28rem;
   @media (max-width:768px) {
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
@@ -1398,7 +1368,7 @@ textarea {
 }
 
 .contact_form-checkbox label {
-  width: auto;
+  width: 100%;
   font-size: 1.8rem;
   line-height: 1;
   display: flex;
@@ -1406,9 +1376,11 @@ textarea {
   gap: 2rem;
   cursor: pointer;
 
-  @media (max-width:768px) {
+    @media (max-width:786px) {
       font-size: 1.6rem;
       line-height: 1;
+      }
+  @media (max-width:768px) {
       gap: 1rem;
       }
   @media (max-width:374px) {
@@ -1496,7 +1468,8 @@ input[type="checkbox"]:checked:before {
 
 .contact_form_privacy_container h3,
 .contact_form_privacy_container h4,
-.contact_form_privacy_container p {
+.contact_form_privacy_container p,
+.contact_form_privacy_container li {
   white-space: pre-wrap;
   font-size: 1.8rem;
   line-height: calc(31 / 18);
@@ -1506,6 +1479,12 @@ input[type="checkbox"]:checked:before {
     font-size: 1.6rem;
     line-height: calc(33 / 16);
   }
+}
+
+.contact_form_privacy_container li {
+  display: list-item;
+  list-style: disc;
+  list-style-position: inside;
 }
 
 .contact_form_privacy_container_paragraph{
@@ -1577,13 +1556,13 @@ input[type="checkbox"]:checked:before {
 }
 
 .footer_nav {
-  width: 72.2rem;
+  max-width: 72.2rem;
+  width: 100%;
   height: auto;
   padding-top: 2.8rem;
   margin: 0 auto;
   border-top: 1px solid black;
   @media (max-width:768px) {
-      width: 100%;
       padding-top: 2rem;
       }
 }
@@ -1636,9 +1615,6 @@ input[type="checkbox"]:checked:before {
 
 .copyright_right {
     display: inline-block;
-    @media (max-width:768px) {
-      margin-right: 20px;
-    }
   }
 
 /*top_icon*/
@@ -1670,16 +1646,16 @@ input[type="checkbox"]:checked:before {
   pointer-events: none;
 }
 
-
+.top_icon:hover img {
+  animation: shake-top 0.4s ease-in-out;
+}
 
 .top_icon.show {
   opacity: 1;
   visibility: visible;
 }
 
-.top_icon:hover {
-  animation: shake-top 0.4s ease-in-out;
-}
+
 
 @keyframes shake-top {
   0% { transform: translateY(0); }
