@@ -847,11 +847,6 @@ address {
   gap: 4.35%;
   margin-top: 6.8rem;
 }
-@media (max-width: 938px) {
-  .works_contents {
-    gap: 4%;
-  }
-}
 @media (max-width: 768px) {
   .works_contents {
     margin-top: 3.8rem;
@@ -1279,6 +1274,15 @@ address {
   .number a:hover {
     cursor: pointer;
     opacity: 0.7;
+  }
+}
+
+.tel-link {
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .tel-link {
+    pointer-events: all;
   }
 }
 

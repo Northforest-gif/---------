@@ -720,9 +720,6 @@ address {
   gap: 4.35%;
   margin-top: 6.8rem;
 
-  @media (max-width:938px) {
-     gap: 4%;
-      }
    @media (max-width:768px) {
      margin-top: 3.8rem;
      grid-template-columns: 1fr;
@@ -1064,6 +1061,13 @@ address {
       }
 }
 
+.tel-link {
+  pointer-events: none;
+
+  @media (max-width:768px) {
+      pointer-events: all;
+      }
+}
 
 .mail_address {
   margin-top: 1.6rem;
